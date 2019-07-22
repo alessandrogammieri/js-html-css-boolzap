@@ -9,7 +9,7 @@
   background-color: #d6dbd9;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -20,8 +20,84 @@
   display: flex;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 200;
+}
+
+/* Regole del box degli User */
+.box-left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+  /* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8e8e8e;
+}
+  /* Header User */
+.header-user {
+  height: 59px;
+  width: 100%;
+  background-color: #eee;
+}
+  /* Barra Notifiche */
+.notification {
+  height: 89px;
+  width: 100%;
+  background-color: #9DE1FE;
+}
+  /* Barra di ricerca */
+.search {
+  height: 49px;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+  /* Box degli utenti */
+.box-user {
+  overflow: auto;
+}
+.user {
+  height: 72px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+}
+.contact {
+  width: 80%;
+  border-bottom: solid 1px #e9ebeb;
+}
+.time-user {
+
+}
+
+/* Regole delle conversazioni */
+.box-right {
+  width: 70%;
+  height: 100%;
+  border-left: solid 1px #4b4b4b;
   background-color: red;
 }
 
@@ -39,6 +115,6 @@
     height: calc(100% - 38px);
     width: 1396px;
     margin: 0 auto;
-    background-color: red;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   }
 }
