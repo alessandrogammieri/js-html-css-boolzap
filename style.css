@@ -12,7 +12,7 @@
   background-color: #d6dbd9;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@
   display: flex;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 200;
 }
 
@@ -67,16 +67,45 @@ background: #8e8e8e;
   height: 89px;
   width: 100%;
   background-color: #9DE1FE;
+  display: flex;
+  align-items: center;
 }
   /* Barra di ricerca */
 .search {
   height: 49px;
   width: 100%;
   background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search form {
+  background-color: #fff;
+  width: 380px;
+  height: 32px;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+}
+.search form i {
+  margin-right: 15px;
+  padding: 0 20px;
+  font-size: 15px;
+  color: #8e8e8e;
+}
+.search form input {
+  width: 295px;
+  border: none;
+  color: #8e8e8e;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 28px;
 }
   /* Box degli utenti */
 .box-user {
   overflow: auto;
+  height: calc(100% - 197px);
 }
 .user {
   height: 72px;
@@ -152,29 +181,54 @@ background: #8e8e8e;
 .chat {
   background-image: url("media/sfondo.jpg");
   width: 100%;
-  height: 100%;
+  height: calc(100% - 131px);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
   overflow: auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
   /* Barra per inviare messagi */
 .bar-right {
-  height: 62px;
+  height: 72px;
   width: 100%;
   background-color: #eee;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0 10px;
 }
   /* Form */
 .bar-right form input {
   width: 846px;
-  height: 42px;
+  height: 40px;
   border-radius: 21px;
   border: 1px solid #fff;
   background-color: #fff;
-  text-decoration: none;
+  color: #8e8e8e;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 20px;
+}
+.msguser {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #dcf8c6;
+  border-radius: 7.5px;
+  box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
+  padding: 6px 7px 8px 9px;
+  float: right;
+  margin: 10px 0;
+}
+.bar-right i {
+  font-size: 25px;
+  color: #8e8e8e;
 }
 
 
