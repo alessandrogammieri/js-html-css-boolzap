@@ -27,6 +27,11 @@
   z-index: 200;
 }
 
+#template {
+  display: none;
+  position: relative;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
 width: 8px;
@@ -60,7 +65,18 @@ background: #8e8e8e;
 .header-user .image img {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+}
+.icon {
+  width: 80%;
+  padding-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon i {
+  font-size: 20px;
+  color: #8e8e8e;
+  padding-left: 30px;
 }
   /* Barra Notifiche */
 .notification {
@@ -69,6 +85,42 @@ background: #8e8e8e;
   background-color: #9DE1FE;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.note {
+  width: 80%;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.note p {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 3px;
+}
+.notification div span {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.notification div span a {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 3px;
+  text-decoration: none;
+}
+.notification div span i {
+  color: #000;
+  font-size: 11px;
+  margin-left: 4px;
+}
+.notification div span a:hover{
+  text-decoration: underline;
 }
   /* Barra di ricerca */
 .search {
@@ -176,6 +228,20 @@ background: #8e8e8e;
   height: 59px;
   width: 100%;
   background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.header-right .image {
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.header-right .image img {
+  width: 40px;
+  height: 40px;
+}
+.header-right .image .name {
+  font-size: 16px;
+  padding-left: 20px;
 }
   /* Box delle Conversazioni */
 .chat {
@@ -184,12 +250,10 @@ background: #8e8e8e;
   height: calc(100% - 131px);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
   overflow: auto;
-  padding: 100px;
+  padding: 100px 100px 0 100px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
   /* Barra per inviare messagi */
 .bar-right {
@@ -223,15 +287,25 @@ background: #8e8e8e;
   border-radius: 7.5px;
   box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
   padding: 6px 7px 8px 9px;
-  float: right;
   margin: 10px 0;
+  align-self: flex-end;
+}
+.msgrisp {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #fff;
+  border-radius: 7.5px;
+  box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
+  padding: 6px 7px 8px 9px;
+  margin: 10px 0;
+  align-self: flex-start;
 }
 .bar-right i {
   font-size: 25px;
   color: #8e8e8e;
 }
-
-
 
 /* REGOLE RESPONSIVE */
 @media screen and (min-width: 1441px) {

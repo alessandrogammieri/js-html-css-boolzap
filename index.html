@@ -19,14 +19,20 @@
             <div class="image">
               <img src="media/trump.jpg" alt="Donald Trump">
             </div>
-            <!-- TO DO inserire icone -->
+            <div class="icon">
+              <i class="fas fa-circle-notch"></i>
+              <i class="fas fa-comment-dots"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
           </div>
           <div class="notification">
-            <img src="media/bell.png" width="48" alt="Icon bell">
-            <div>
+            <div class="image">
+              <img src="media/bell.png" width="48" alt="Icon bell">
+            </div>
+            <div class="note">
               <p>Ricevi notifiche di nuovi messaggi</p>
               <span>
-                <p>Attiva notifiche desktop</p>
+                <a href="#">Attiva notifiche desktop</a>
                 <i class="fas fa-chevron-right"></i>
               </span>
             </div>
@@ -34,7 +40,7 @@
           <div class="search">
             <form>
               <i class="fa fa-search"></i>
-              <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+              <input class="cerca" type="text" placeholder="Cerca o inizia una nuova chat" name="search">
             </form>
           </div>
           <div class="box-user">
@@ -176,25 +182,37 @@
             </div>
           </div>
         </div>
+        <!-- Box della Chat -->
         <div class="box-right">
           <div class="header-right">
-            <!-- TO DO inserire foto e icone -->
+            <div class="image">
+              <img src="media/putin.jpg" alt="Vladimir Putin">
+              <p class="name">Vladimir Putin</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
           </div>
           <div class="chat">
-            <!-- TO DO inserire conversazione -->
+            <!-- Spazio riempito dal tamplate -->
           </div>
           <div class="bar-right">
             <i class="far fa-grin-alt"></i>
             <form>
-              <input id="msginput" type="text" name="message" value="Scrivi un messaggio">
+              <input id="msginput" type="text" placeholder="Scrivi un messaggio" name="message">
             </form>
             <i id="sendmsg" class="fab fa-telegram-plane"></i>
           </div>
         </div>
       </div>
-
     </div>
-
+    <!-- Template per i messaggi -->
+    <div id="template">
+      <div class="msguser"></div>
+      <div class="msgrisp"></div>
+    </div>
     <!-- Script di JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Script di Javascript -->
