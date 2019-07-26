@@ -27,7 +27,6 @@
 
 #template {
   display: none;
-  position: relative;
 }
 
 /* Scrollbar */
@@ -263,55 +262,33 @@ background: #8e8e8e;
   display: flex;
   flex-direction: column;
 }
-.botta {
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  background-color: #dcf8c6;
-  border-radius: 7.5px;
-  box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
-  padding: 6px 7px 8px 9px;
-  margin: 10px 0;
-  margin-left: 550px;
-  align-self: flex-end;
-}
-.risposta {
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  background-color: #fff;
-  border-radius: 7.5px;
-  box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
-  padding: 6px 7px 8px 9px;
-  margin: 10px 0;
-  margin-right: 550px;
-  align-self: flex-start;
-}
 .msguser {
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
   background-color: #dcf8c6;
   border-radius: 7.5px;
   box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
-  padding: 6px 7px 8px 9px;
+  padding: 6px 15px 8px 9px;
   margin: 10px 0;
   align-self: flex-end;
+  position: relative;
+  width: fit-content;
+  max-width: 50%;
 }
 .msgrisp {
+  background-color: #fff;
+  border-radius: 7.5px;
+  box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
+  padding: 6px 15px 8px 9px;
+  margin: 10px 0;
+  align-self: flex-start;
+  position: relative;
+  width: fit-content;
+  max-width: 50%;
+}
+.msguser p, .msgrisp p {
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  background-color: #fff;
-  border-radius: 7.5px;
-  box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
-  padding: 6px 7px 8px 9px;
-  margin: 10px 0;
-  align-self: flex-start;
 }
 
   /* Barra per inviare messagi */
@@ -340,6 +317,37 @@ background: #8e8e8e;
 .bar-right i {
   font-size: 25px;
   color: #8e8e8e;
+}
+  /* Menu messaggi */
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  width: 150px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #888888;
+  z-index: 999;
+  padding: 1px 0;
+  display: none;
+}
+.menu p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.menu p:hover {
+  background-color: #dfdfdf;
+  border-radius: 5px;
+}
+.menu-option {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 11px;
+  display: none;
+  color: #000;
 }
 
 /* REGOLE RESPONSIVE */

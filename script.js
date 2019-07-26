@@ -6,8 +6,8 @@ $( document ).ready(function() {
     var msg = $("#msginput").val();
     // Creo il clone del messaggio utente
     var msgelement = $("#template .msguser").clone();
+    var newmsg = msgelement.children('p').text(msg);
     // Stampo l'input
-    msgelement.text(msg);
     $(".boxchat.active").append(msgelement);
     // Pulisco l'input alla fine
     $("#msginput").val("");
@@ -15,8 +15,8 @@ $( document ).ready(function() {
     var msgelementrisp = $("#template .msgrisp").clone();
     // Creo risposta automatica in 1 secondo
     setTimeout(function () {
-      var risp = msgelementrisp.text("Ok");
-      $(".boxchat.active").append(risp);
+      var risp = msgelementrisp.children('p').text("Non ho tempo!");
+      $(".boxchat.active").append(msgelementrisp);
     }, 1000);
   }
 
@@ -34,26 +34,6 @@ $( document ).ready(function() {
       }
     }
   );
-
-  // FUNZIONE BOTTA E RISPOSTA
-  function sendMessage() {
-    // Salvo msg inserito dall'utente
-    var msg = $("#msginput").val();
-    // Creo il clone del messaggio utente
-    var msgelement = $("#template .msguser").clone();
-    // Stampo l'input
-    msgelement.text(msg);
-    $(".boxchat.active").append(msgelement);
-    // Pulisco l'input alla fine
-    $("#msginput").val("");
-    // Creo il mio clone della risposta
-    var msgelementrisp = $("#template .msgrisp").clone();
-    // Creo risposta automatica in 1 secondo
-    setTimeout(function () {
-      var risp = msgelementrisp.text("Ok");
-      $(".boxchat.active").append(risp);
-    }, 1000);
-  }
 
   // RICERCHIAMO I CONTATTI
   // La mia funzione si attiva premento un tasto sulla tastiera
@@ -94,5 +74,20 @@ $( document ).ready(function() {
       $('.image[refchat="'+ refchat +'"]').addClass("attiva");
     }
   );
+
+  // COMPARSA/SCOMPARSA ICONA OPZIONI MESSAGGIO
+  $(document).on("mouseenter", ".msguser, .msgrisp", function() {
+    $(this).find(".dropdown i").show();
+  });
+  $(document).on("mouseleave", ".msguser, .msgrisp", function() {
+    $(this).find(".dropdown i").hide();
+  });
+  $(document).on("click",".menu-option", function(){
+    $(this).closest(".dropdown").siblings(".menu").toggle();
+  });
+  $(document).on("click", ".delete", function(){
+    $(this).closest(".msguser, .msgrisp").children("p").html('<i class="fas fa-ban"></i>' + ' ' + '<em>Hai eliminato questo messaggio</em>');
+    $(".menu").hide();
+  });
 
 });
