@@ -44,7 +44,7 @@
             </form>
           </div>
           <div class="box-user">
-            <div class="user">
+            <div refchat="chat1" class="user">
               <div class="image">
                 <img src="media/putin.jpg" alt="Putin">
               </div>
@@ -56,7 +56,7 @@
                 <p class="text">Россия</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat2" class="user">
               <div class="image">
                 <img src="media/merkel.jpg" alt="Angela Merkel">
               </div>
@@ -68,7 +68,7 @@
                 <p class="text">Wir mögen Geld</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat3" class="user">
               <div class="image">
                 <img src="media/jinping.jpg" alt="Xi Jinping">
               </div>
@@ -80,7 +80,7 @@
                 <p class="text">中国</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat4" class="user">
               <div class="image">
                 <img src="media/papa.jpg" alt="Papa Francesco">
               </div>
@@ -92,7 +92,7 @@
                 <p class="text">&#128526;</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat5" class="user">
               <div class="image">
                 <img src="media/macron.jpg" alt="Emmanuel Macron">
               </div>
@@ -108,7 +108,7 @@
                 </p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat6" class="user">
               <div class="image">
                 <img src="media/juncker.jpg" alt="Jean-Claude Juncker">
               </div>
@@ -120,7 +120,7 @@
                 <p class="text">Anekdot &#127866;</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat7" class="user">
               <div class="image">
                 <img src="media/elisabetta.jpg" alt="Elisabetta II">
               </div>
@@ -132,7 +132,7 @@
                 <p class="text">God Save the Queen</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat8" class="user">
               <div class="image">
                 <img src="media/kim.jpg" alt="Kim Jong-un">
               </div>
@@ -144,7 +144,7 @@
                 <p class="text">&#127836;</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat9" class="user">
               <div class="image">
                 <img src="media/salvini.jpg" alt="Matteo Salvini">
               </div>
@@ -156,7 +156,7 @@
                 <p class="text">&#128150;</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat10" class="user">
               <div class="image">
                 <img src="media/hillary.jpg" alt="Hillary Clinton">
               </div>
@@ -168,7 +168,7 @@
                 <p class="text">God Save Monica Lewinsky</p>
               </div>
             </div>
-            <div class="user">
+            <div refchat="chat11" class="user">
               <div class="image">
                 <img src="media/silvio.jpg" alt="Silvio Berlusconi">
               </div>
@@ -185,9 +185,49 @@
         <!-- Box della Chat -->
         <div class="box-right">
           <div class="header-right">
-            <div class="image">
+            <div refchat="chat1" class="image attiva">
               <img src="media/putin.jpg" alt="Vladimir Putin">
               <p class="name">Vladimir Putin</p>
+            </div>
+            <div refchat="chat2" class="image">
+              <img src="media/merkel.jpg" alt="Angela Merkel">
+              <p class="name">Angela Merkel</p>
+            </div>
+            <div refchat="chat3" class="image">
+              <img src="media/jinping.jpg" alt="Xi Jinping">
+              <p class="name">Xi Jinping</p>
+            </div>
+            <div refchat="chat4" class="image">
+              <img src="media/papa.jpg" alt="Papa Francesco">
+              <p class="name">Papa Francesco</p>
+            </div>
+            <div refchat="chat5" class="image">
+              <img src="media/macron.jpg" alt="Emmanuel Macron">
+              <p class="name">Emmanuel Macron</p>
+            </div>
+            <div refchat="chat6" class="image">
+              <img src="media/juncker.jpg" alt="Jean-Claude Juncker">
+              <p class="name">Jean-Claude Juncker</p>
+            </div>
+            <div refchat="chat7" class="image">
+              <img src="media/elisabetta.jpg" alt="Elisabetta II">
+              <p class="name">Elisabetta II</p>
+            </div>
+            <div refchat="chat8" class="image">
+              <img src="media/kim.jpg" alt="Kim Jong-un">
+              <p class="name">Kim Jong-un</p>
+            </div>
+            <div refchat="chat9" class="image">
+              <img src="media/salvini.jpg" alt="Matteo Salvini">
+              <p class="name">Matteo Salvini</p>
+            </div>
+            <div refchat="chat10" class="image">
+              <img src="media/hillary.jpg" alt="Hillary Clinton">
+              <p class="name">Hillary Clinton</p>
+            </div>
+            <div refchat="chat11" class="image">
+              <img src="media/silvio.jpg" alt="Silvio Berlusconi">
+              <p class="name">Silvio Berlusconi</p>
             </div>
             <div class="icon">
               <i class="fas fa-search"></i>
@@ -195,14 +235,101 @@
               <i class="fas fa-ellipsis-v"></i>
             </div>
           </div>
+
           <div class="chat">
-            <!-- Spazio riempito dal tamplate -->
+            <div refchat="chat1" class="boxchat active">
+              <div class="botta">
+                Ciao come stai? Non ci vediamo da molto!
+              </div>
+              <div class="risposta">
+                Tutto bene. Tu che mi racconti?
+              </div>
+            </div>
+            <div refchat="chat2" class="boxchat">
+              <div class="botta">
+                Usciamo stasera, che ne dici?
+              </div>
+              <div class="risposta">
+                Si, mi andrebbe una pizza!!!
+              </div>
+            </div>
+            <div refchat="chat3" class="boxchat">
+              <div class="botta">
+                Domani sei libero?
+              </div>
+              <div class="risposta">
+                No, purtroppo sono impegnato.
+              </div>
+            </div>
+            <div refchat="chat4" class="boxchat">
+              <div class="botta">
+                Ciao come stai? Non ci vediamo da molto!
+              </div>
+              <div class="risposta">
+                Tutto bene. Tu che mi racconti?
+              </div>
+            </div>
+            <div refchat="chat5" class="boxchat">
+              <div class="botta">
+                Usciamo stasera, che ne dici?
+              </div>
+              <div class="risposta">
+                Si, mi andrebbe una pizza!!!
+              </div>
+            </div>
+            <div refchat="chat6" class="boxchat">
+              <div class="botta">
+                Domani sei libero?
+              </div>
+              <div class="risposta">
+                No, purtroppo sono impegnato.
+              </div>
+            </div>
+            <div refchat="chat7" class="boxchat">
+              <div class="botta">
+                Ciao come stai? Non ci vediamo da molto!
+              </div>
+              <div class="risposta">
+                Tutto bene. Tu che mi racconti?
+              </div>
+            </div>
+            <div refchat="chat8" class="boxchat">
+              <div class="botta">
+                Usciamo stasera, che ne dici?
+              </div>
+              <div class="risposta">
+                Si, mi andrebbe una pizza!!!
+              </div>
+            </div>
+            <div refchat="chat9" class="boxchat">
+              <div class="botta">
+                Domani sei libero?
+              </div>
+              <div class="risposta">
+                No, purtroppo sono impegnato.
+              </div>
+            </div>
+            <div refchat="chat10" class="boxchat">
+              <div class="botta">
+                Ciao come stai? Non ci vediamo da molto!
+              </div>
+              <div class="risposta">
+                Tutto bene. Tu che mi racconti?
+              </div>
+            </div>
+            <div refchat="chat11" class="boxchat">
+              <div class="botta">
+                Usciamo stasera, che ne dici?
+              </div>
+              <div class="risposta">
+                Si, mi andrebbe una pizza!!!
+              </div>
+            </div>
           </div>
+
           <div class="bar-right">
             <i class="far fa-grin-alt"></i>
-            <form>
-              <input id="msginput" type="text" placeholder="Scrivi un messaggio" name="message">
-            </form>
+            <input id="msginput" type="text" placeholder="Scrivi un messaggio" name="message">
             <i id="sendmsg" class="fab fa-telegram-plane"></i>
           </div>
         </div>
@@ -210,8 +337,12 @@
     </div>
     <!-- Template per i messaggi -->
     <div id="template">
-      <div class="msguser"></div>
-      <div class="msgrisp"></div>
+      <div class="msguser">
+
+      </div>
+      <div class="msgrisp">
+        
+      </div>
     </div>
     <!-- Script di JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
