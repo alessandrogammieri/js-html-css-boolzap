@@ -130,7 +130,7 @@ background: #8e8e8e;
 }
 .search form {
   background-color: #fff;
-  width: 380px;
+  width: 90%;
   height: 32px;
   border-radius: 21px;
   display: flex;
@@ -143,7 +143,7 @@ background: #8e8e8e;
   color: #8e8e8e;
 }
 .search form input {
-  width: 295px;
+  width: 50%;
   border: none;
   color: #8e8e8e;
   font-family: 'Roboto', sans-serif;
@@ -252,8 +252,8 @@ background: #8e8e8e;
   height: calc(100% - 131px);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: auto;
   padding: 100px 100px 0 100px;
+  overflow-y: auto;
 }
 .boxchat {
   display: none;

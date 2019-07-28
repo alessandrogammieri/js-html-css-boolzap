@@ -24,6 +24,7 @@ $( document ).ready(function() {
   $("#sendmsg").click(
     function () {
       sendMessage();
+      scrollMessage();
     }
   );
 
@@ -31,6 +32,7 @@ $( document ).ready(function() {
   $("#msginput").keypress(function() {
       if (event.which == 13) {
         sendMessage();
+        scrollMessage();
       }
     }
   );
@@ -89,5 +91,13 @@ $( document ).ready(function() {
     $(this).closest(".msguser, .msgrisp").children("p").html('<i class="fas fa-ban"></i>' + ' ' + '<em>Hai eliminato questo messaggio</em>');
     $(".menu").hide();
   });
+
+  // SCROLL AUTOMATICA DELLA CHAT
+  function scrollMessage () {
+    // Misurazione dell'altezza della chat
+    var scroll = $(".chat")[0].scrollHeight;
+    // Applico lo scroll al contenitore della chat
+    $(".chat").scrollTop(scroll);
+  }
 
 });
