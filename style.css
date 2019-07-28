@@ -266,7 +266,7 @@ background: #8e8e8e;
   background-color: #dcf8c6;
   border-radius: 7.5px;
   box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
-  padding: 6px 15px 8px 9px;
+  padding: 6px 40px 8px 9px;
   margin: 10px 0;
   align-self: flex-end;
   position: relative;
@@ -277,7 +277,7 @@ background: #8e8e8e;
   background-color: #fff;
   border-radius: 7.5px;
   box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
-  padding: 6px 15px 8px 9px;
+  padding: 6px 40px 8px 9px;
   margin: 10px 0;
   align-self: flex-start;
   position: relative;
@@ -289,6 +289,14 @@ background: #8e8e8e;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
+}
+.msguser span, .msgrisp span {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 11px;
 }
 
   /* Barra per inviare messagi */

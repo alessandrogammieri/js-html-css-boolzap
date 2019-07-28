@@ -6,7 +6,8 @@ $( document ).ready(function() {
     var msg = $("#msginput").val();
     // Creo il clone del messaggio utente
     var msgelement = $("#template .msguser").clone();
-    var newmsg = msgelement.children('p').text(msg);
+    var newmsg = msgelement.children("p").text(msg);
+    var oramsg = msgelement.children("span").text(getCurrentTime());
     // Stampo l'input
     $(".boxchat.active").append(msgelement);
     // Pulisco l'input alla fine
@@ -15,7 +16,8 @@ $( document ).ready(function() {
     var msgelementrisp = $("#template .msgrisp").clone();
     // Creo risposta automatica in 1 secondo
     setTimeout(function () {
-      var risp = msgelementrisp.children('p').text("Non ho tempo!");
+      var risp = msgelementrisp.children("p").text("Non ho tempo!");
+      var orarisp = msgelementrisp.children("span").text(getCurrentTime());
       $(".boxchat.active").append(msgelementrisp);
     }, 1000);
   }
@@ -99,5 +101,15 @@ $( document ).ready(function() {
     // Applico lo scroll al contenitore della chat
     $(".chat").scrollTop(scroll);
   }
+
+  // FUNZIONE PER ORARIO MESSAGGI CHAT
+  function getCurrentTime () {
+    var data = new Date();
+    var h, m;
+    h = data.getHours() + ":";
+    m = data.getMinutes();
+    return h + m;
+  }
+
 
 });
