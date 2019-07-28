@@ -105,11 +105,15 @@ $( document ).ready(function() {
   // FUNZIONE PER ORARIO MESSAGGI CHAT
   function getCurrentTime () {
     var data = new Date();
-    var h, m;
-    h = data.getHours() + ":";
-    m = data.getMinutes();
+    var h = data.getHours() + ":";
+    if (h < 10) {
+        h = '0' + h;
+      }
+    var m = data.getMinutes();
+    if (m < 10) {
+        m = '0' + m;
+      }
     return h + m;
   }
-
 
 });
