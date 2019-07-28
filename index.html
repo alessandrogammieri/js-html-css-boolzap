@@ -256,10 +256,12 @@
         </div>
       </div>
     </div>
-    <!-- Template per i messaggi -->
-    <div id="template">
+    <!-- Template Handlebars -->
+    <script id="template" type="text/x-handlebars-template">
       <div class="msguser">
-        <p></p>
+        <p>
+          {{messaggio}}
+        </p>
         <div class="dropdown">
           <i class="fas fa-chevron-down menu-option"></i>
         </div>
@@ -271,10 +273,16 @@
             <p>Elimina messaggio</p>
           </div>
         </div>
-        <span></span>
+        <span>
+          {{orario}}
+        </span>
       </div>
+    </script>
+    <script id="tema" type="text/x-handlebars-template">
       <div class="msgrisp">
-        <p></p>
+        <p>
+          {{risp}}
+        </p>
         <div class="dropdown">
           <i class="fas fa-chevron-down menu-option"></i>
         </div>
@@ -286,11 +294,15 @@
             <p>Elimina messaggio</p>
           </div>
         </div>
-        <span class="message-time"></span>
+        <span>
+          {{orariorisp}}
+        </span>
       </div>
-    </div>
+    </script>
     <!-- Script di JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Script di Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <!-- Script di Javascript -->
     <script src="script.js" charset="utf-8"></script>
   </body>

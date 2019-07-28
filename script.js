@@ -1,24 +1,27 @@
 
 $( document ).ready(function() {
-  // FUNZIONE BOTTA E RISPOSTA
+  // FUNZIONE INVIO MESSAGGIO
   function sendMessage() {
     // Salvo msg inserito dall'utente
     var msg = $("#msginput").val();
-    // Creo il clone del messaggio utente
-    var msgelement = $("#template .msguser").clone();
-    var newmsg = msgelement.children("p").text(msg);
-    var oramsg = msgelement.children("span").text(getCurrentTime());
+    // Creo il clone del messaggio con Handlebars
+    var source = $("#template").html();
+    var template = Handlebars.compile(source);
     // Stampo l'input
-    $(".boxchat.active").append(msgelement);
+    var context = {messaggio: msg, orario: getCurrentTime()};
+    var html = template(context);
+    $(".boxchat.active").append(html);
     // Pulisco l'input alla fine
     $("#msginput").val("");
-    // Creo il mio clone della risposta
-    var msgelementrisp = $("#template .msgrisp").clone();
     // Creo risposta automatica in 1 secondo
     setTimeout(function () {
-      var risp = msgelementrisp.children("p").text("Non ho tempo!");
-      var orarisp = msgelementrisp.children("span").text(getCurrentTime());
-      $(".boxchat.active").append(msgelementrisp);
+      // Creo il mio clone della risposta con Handlebars
+      var source = $("#tema").html();
+      var tema = Handlebars.compile(source);
+      // Stampo l'input
+      var text = {risp: "Non ho tempo!", orariorisp: getCurrentTime()};
+      var risp = tema(text);
+      $(".boxchat.active").append(risp);
     }, 1000);
   }
 
