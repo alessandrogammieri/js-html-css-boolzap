@@ -1,5 +1,5 @@
 
-$( document ).ready(function() {
+$( document ).ready(function () {
   // FUNZIONE INVIO MESSAGGIO
   function sendMessage() {
     // Salvo msg inserito dall'utente
@@ -34,7 +34,7 @@ $( document ).ready(function() {
   );
 
   // INVIO DEL MESSAGGIO TRAMITE IL TASTO INVIO
-  $("#msginput").keypress(function() {
+  $("#msginput").keypress(function () {
       if (event.which == 13) {
         sendMessage();
         scrollMessage();
@@ -53,7 +53,7 @@ $( document ).ready(function() {
       // Se spazio > di 0 parte la funzione
       if (cercaNome.length > 0) {
         // Funzione che attraversa i mie contatti
-        $(".box-user > .user").each(function (){
+        $(".box-user > .user").each(function () {
           // Creo una variabile che trasformo i nomi in minuscolo
           var cercaCont = $(this).find(".name").text().toLowerCase();
           // Verifico se inclusi
@@ -83,16 +83,16 @@ $( document ).ready(function() {
   );
 
   // COMPARSA/SCOMPARSA ICONA OPZIONI MESSAGGIO
-  $(document).on("mouseenter", ".msguser, .msgrisp", function() {
+  $(document).on("mouseenter", ".msguser, .msgrisp", function () {
     $(this).find(".dropdown i").show();
   });
-  $(document).on("mouseleave", ".msguser, .msgrisp", function() {
+  $(document).on("mouseleave", ".msguser, .msgrisp", function () {
     $(this).find(".dropdown i").hide();
   });
-  $(document).on("click",".menu-option", function(){
+  $(document).on("click",".menu-option", function () {
     $(this).closest(".dropdown").siblings(".menu").toggle();
   });
-  $(document).on("click", ".delete", function(){
+  $(document).on("click", ".delete", function () {
     $(this).closest(".msguser, .msgrisp").children("p").html('<i class="fas fa-ban"></i>' + ' ' + '<em>Hai eliminato questo messaggio</em>');
     $(".menu").hide();
   });
@@ -110,13 +110,21 @@ $( document ).ready(function() {
     var data = new Date();
     var h = data.getHours() + ":";
     if (h < 10) {
-        h = '0' + h;
+        h = "0" + h;
       }
     var m = data.getMinutes();
     if (m < 10) {
-        m = '0' + m;
+        m = "0" + m;
       }
     return h + m;
   }
+
+  // CAMBIO ICONA A INVIO MESSAGGIO
+    $(".bar-right input").focus(function () {
+      //se l'utente scrive un testo, l'icona del microfono si trasforma nell'icona invio
+      $("#sendmsg").toggleClass("fas fa-microphone fab fa-telegram-plane");
+    }).blur(function () {
+      $("#sendmsg").toggleClass("fas fa-microphone fab fa-telegram-plane");
+    });
 
 });
